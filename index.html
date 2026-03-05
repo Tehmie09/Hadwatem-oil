@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hadwatem Oil — Premium Oil Suppliers, Lagos</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C8922A;
+    --gold-light: #E8B84B;
+    --amber: #F5A623;
+    --cream: #FDF6EC;
+    --dark: #1A1208;
+    --brown: #3D2B0E;
+    --green: #2D5016;
+    --green-light: #4A7A24;
+    --white: #FFFFFF;
+    --text-muted: #7A5C30;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+
+  /* ===== NAVBAR ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 6%;
+    background: rgba(26, 18, 8, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200, 146, 42, 0.2);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--gold-light);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-logo span {
+    color: var(--white);
+    font-style: italic;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold-light); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--dark) !important;
+    padding: 0.55rem 1.4rem;
+    border-radius: 2px;
+    font-weight: 500 !important;
+    transition: background 0.3s !important;
+  }
+
+  .nav-cta:hover { background: var(--gold-light) !important; color: var(--dark) !important; }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    background: var(--dark);
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 70% 50%, rgba(200, 146, 42, 0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 10% 80%, rgba(45, 80, 22, 0.25) 0%, transparent 60%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(200,146,42,0.08)'/%3E%3C/svg%3E");
+  }
+
+  .hero-ring {
+    position: absolute;
+    right: -10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    border: 1px solid rgba(200, 146, 42, 0.15);
+    animation: pulse-ring 4s ease-in-out infinite;
+  }
+
+  .hero-ring::before {
+    content: '';
+    position: absolute;
+    inset: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(200, 146, 42, 0.1);
+    animation: pulse-ring 4s ease-in-out infinite 0.5s;
+  }
+
+  .hero-ring::after {
+    content: '';
+    position: absolute;
+    inset: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,146,42,0.12), rgba(245,166,35,0.06), transparent);
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-ring {
+    0%, 100% { transform: translateY(-50%) scale(1); opacity: 0.6; }
+    50% { transform: translateY(-50%) scale(1.03); opacity: 1; }
+  }
+
+  @keyframes shimmer {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 6%;
+    max-width: 700px;
+    animation: fadeUp 1s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(200, 146, 42, 0.15);
+    border: 1px solid rgba(200, 146, 42, 0.35);
+    color: var(--gold-light);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 2px;
+    margin-bottom: 1.8rem;
+    animation: fadeUp 1s ease 0.2s both;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    animation: blink 1.5s ease-in-out infinite;
+  }
+
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 1s ease 0.3s both;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+    display: block;
+  }
+
+  .hero p {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    animation: fadeUp 1s ease 0.4s both;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    animation: fadeUp 1s ease 0.5s both;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--dark);
+    padding: 0.9rem 2rem;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(200, 146, 42, 0.4);
+  }
+
+  .btn-outline {
+    border: 1px solid rgba(255,255,255,0.3);
+    color: var(--white);
+    padding: 0.9rem 2rem;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold-light);
+  }
+
+  .hero-stats {
+    position: absolute;
+    bottom: 3rem;
+    right: 6%;
+    display: flex;
+    gap: 2.5rem;
+    z-index: 2;
+    animation: fadeUp 1s ease 0.7s both;
+  }
+
+  .stat {
+    text-align: center;
+    border-left: 1px solid rgba(200,146,42,0.3);
+    padding-left: 1.5rem;
+  }
+
+  .stat:first-child { border-left: none; padding-left: 0; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ===== MARQUEE ===== */
+  .marquee-section {
+    background: var(--gold);
+    padding: 0.9rem 0;
+    overflow: hidden;
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 3rem;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .marquee-item {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--dark);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .marquee-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--brown);
+  }
+
+  /* ===== PRODUCTS ===== */
+  .products {
+    padding: 7rem 6%;
+    background: var(--cream);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-tag {
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.2;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .section-sub {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .product-card {
+    background: var(--white);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(200,146,42,0.12);
+    transition: all 0.4s;
+    position: relative;
+  }
+
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(200, 146, 42, 0.15);
+    border-color: rgba(200,146,42,0.3);
+  }
+
+  .product-visual {
+    height: 180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    overflow: hidden;
+  }
+
+  .product-visual-palm {
+    background: linear-gradient(135deg, #2D1A05 0%, #5C3010 50%, #8B4513 100%);
+  }
+
+  .product-visual-veg {
+    background: linear-gradient(135deg, #1A3A0A 0%, #2D5016 50%, #4A7A24 100%);
+  }
+
+  .product-visual-ground {
+    background: linear-gradient(135deg, #3D2000 0%, #7A4210 50%, #C06820 100%);
+  }
+
+  .product-visual-soy {
+    background: linear-gradient(135deg, #1A2D10 0%, #3A5A1A 50%, #5A8A28 100%);
+  }
+
+  .product-emoji {
+    font-size: 3.5rem;
+    filter: drop-shadow(0 4px 15px rgba(0,0,0,0.4));
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .product-badge {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    background: var(--gold);
+    color: var(--dark);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 2px;
+  }
+
+  .product-info {
+    padding: 1.5rem;
+  }
+
+  .product-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .product-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    font-weight: 300;
+    margin-bottom: 1.2rem;
+  }
+
+  .product-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .product-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--brown);
+  }
+
+  .product-feature::before {
+    content: '✓';
+    color: var(--green-light);
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  .product-cta {
+    display: block;
+    text-align: center;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 0.7rem;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: all 0.3s;
+  }
+
+  .product-cta:hover {
+    background: var(--gold);
+    color: var(--dark);
+  }
+
+  /* ===== WHY US ===== */
+  .why-us {
+    background: var(--dark);
+    padding: 7rem 6%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .why-us-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 50% 80% at 80% 50%, rgba(200,146,42,0.08), transparent);
+  }
+
+  .why-us .section-title { color: var(--white); }
+  .why-us .section-sub { color: rgba(255,255,255,0.5); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .why-card {
+    border: 1px solid rgba(200,146,42,0.15);
+    border-radius: 4px;
+    padding: 2rem;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .why-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+  }
+
+  .why-card:hover { background: rgba(200,146,42,0.06); }
+  .why-card:hover::before { transform: scaleX(1); }
+
+  .why-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .why-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+  }
+
+  .why-desc {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  .testimonials {
+    padding: 7rem 6%;
+    background: #F9F0E1;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 4px;
+    border: 1px solid rgba(200,146,42,0.12);
+    position: relative;
+  }
+
+  .testimonial-card::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: var(--gold);
+    opacity: 0.2;
+    position: absolute;
+    top: -0.5rem;
+    left: 1.5rem;
+    line-height: 1;
+  }
+
+  .testimonial-text {
+    font-size: 0.92rem;
+    color: var(--brown);
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 1.2rem;
+    position: relative;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--dark);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--dark);
+  }
+
+  .author-role {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+
+  .stars {
+    color: var(--gold);
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* ===== HOW TO ORDER ===== */
+  .how-to-order {
+    padding: 7rem 6%;
+    background: var(--cream);
+  }
+
+  .steps {
+    display: flex;
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .steps::before {
+    content: '';
+    position: absolute;
+    top: 3rem;
+    left: calc(16.67% - 1px);
+    right: calc(16.67% - 1px);
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold), rgba(200,146,42,0.3), var(--gold));
+  }
+
+  .step {
+    flex: 1;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .step-num {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--dark);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .step-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact {
+    background: var(--dark);
+    padding: 7rem 6%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 40% 60% at 15% 50%, rgba(45, 80, 22, 0.2), transparent);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    align-items: start;
+  }
+
+  .contact-left .section-title { color: var(--white); text-align: left; }
+  .contact-left .section-tag { text-align: left; }
+
+  .contact-info {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .contact-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 3px;
+    background: rgba(200,146,42,0.15);
+    border: 1px solid rgba(200,146,42,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .contact-item-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+
+  .contact-item-value {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.85);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .contact-item-value a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .contact-item-value a:hover { color: var(--gold-light); }
+
+  .contact-form {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(200,146,42,0.15);
+    border-radius: 4px;
+    padding: 2.5rem;
+  }
+
+  .contact-form h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,146,42,0.2);
+    border-radius: 2px;
+    padding: 0.75rem 1rem;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+    outline: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--gold);
+  }
+
+  .form-group select option { background: #2a1a08; }
+  .form-group textarea { min-height: 90px; resize: vertical; }
+
+  .form-submit {
+    width: 100%;
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    padding: 1rem;
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
+  }
+
+  .form-submit:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+  }
+
+  /* ===== WHATSAPP FLOAT ===== */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 200;
+    width: 58px;
+    height: 58px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+    text-decoration: none;
+    animation: bounce-float 2s ease-in-out infinite;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(37, 211, 102, 0.6);
+    animation: none;
+  }
+
+  @keyframes bounce-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .whatsapp-float svg { width: 28px; height: 28px; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #0E0A04;
+    padding: 3rem 6% 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(200,146,42,0.1);
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--gold-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-links a {
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    font-size: 0.82rem;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-copy {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.25);
+  }
+
+  /* ===== SCROLL ANIMATIONS ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-stats { display: none; }
+    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .steps { flex-direction: column; }
+    .steps::before { display: none; }
+    .step { padding: 0.5rem 1rem; text-align: left; display: flex; gap: 1rem; align-items: flex-start; }
+    .step-num { margin: 0; flex-shrink: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Hadwatem <span>Oil</span></div>
+  <ul class="nav-links">
+    <li><a href="#products">Products</a></li>
+    <li><a href="#why-us">Why Us</a></li>
+    <li><a href="#order">How to Order</a></li>
+    <li><a href="#contact" class="nav-cta">Order Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ring"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Lagos's Trusted Oil Supplier</div>
+    <h1>Pure Oils,<em>Delivered Fresh.</em></h1>
+    <p>Hadwatem Oil brings you premium-grade Palm Oil and Vegetable Oil straight from source — for your kitchen, your business, and your community in Lagos.</p>
+    <div class="hero-buttons">
+      <a href="tel:07062823485" class="btn-primary">📞 Call to Order</a>
+      <a href="#products" class="btn-outline">See Our Products</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Pure & Natural</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">2+</span>
+      <span class="stat-label">Premium Products</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">Lagos</span>
+      <span class="stat-label">Based & Trusted</span>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">🌴 Premium Palm Oil <span class="marquee-dot"></span></span>
+    <span class="marquee-item">🌿 Pure Vegetable Oil <span class="marquee-dot"></span></span>
+    <span class="marquee-item">🏪 Wholesale & Retail <span class="marquee-dot"></span></span>
+    <span class="marquee-item">🚚 Lagos Wide Delivery <span class="marquee-dot"></span></span>
+    <span class="marquee-item">✅ Quality Guaranteed <span class="marquee-dot"></span></span>
+    <span class="marquee-item">💰 Best Market Prices <span class="marquee-dot"></span></span>
+    <span class="marquee-item">🌴 Premium Palm Oil <span class="marquee-dot"></span></span>
+    <span class="marquee-item">🌿 Pure Vegetable Oil <span class="marquee-dot"></span></span>
+    <span class="marquee-item">🏪 Wholesale & Retail <span class="marquee-dot"></span></span>
+    <span class="marquee-item">🚚 Lagos Wide Delivery <span class="marquee-dot"></span></span>
+    <span class="marquee-item">✅ Quality Guaranteed <span class="marquee-dot"></span></span>
+    <span class="marquee-item">💰 Best Market Prices <span class="marquee-dot"></span></span>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="section-header reveal">
+    <span class="section-tag">What We Offer</span>
+    <h2 class="section-title">Our Premium <em>Oils</em></h2>
+    <p class="section-sub">Sourced from the best regions across Nigeria — pure, fresh, and ready for your table or business.</p>
+  </div>
+  <div class="products-grid">
+    <div class="product-card reveal">
+      <div class="product-visual product-visual-palm">
+        <div class="product-emoji">🌴</div>
+        <span class="product-badge">Best Seller</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Palm Oil</div>
+        <div class="product-desc">Rich, naturally red palm oil sourced from South-Eastern Nigeria. Ideal for traditional soups, stews, and everyday Nigerian cooking.</div>
+        <div class="product-features">
+          <div class="product-feature">100% pure, unrefined</div>
+          <div class="product-feature">Rich in Vitamin A & E</div>
+          <div class="product-feature">Available in retail & bulk</div>
+          <div class="product-feature">Deep red, high quality</div>
+        </div>
+        <a href="tel:07062823485" class="product-cta">Order Now — Call Us</a>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-visual product-visual-veg">
+        <div class="product-emoji">🌿</div>
+        <span class="product-badge">Popular</span>
+      </div>
+      <div class="product-info">
+        <div class="product-name">Vegetable Oil</div>
+        <div class="product-desc">Light, clean, and flavour-neutral. Perfect for frying, baking, and everyday cooking. A household essential for every Lagos kitchen.</div>
+        <div class="product-features">
+          <div class="product-feature">Light & odourless</div>
+          <div class="product-feature">High smoke point for frying</div>
+          <div class="product-feature">Available in litres & drums</div>
+          <div class="product-feature">Great for all cooking styles</div>
+        </div>
+        <a href="tel:07062823485" class="product-cta">Order Now — Call Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us" id="why-us">
+  <div class="why-us-bg"></div>
+  <div class="section-header reveal">
+    <span class="section-tag">Why Choose Hadwatem</span>
+    <h2 class="section-title">We Don't Just Sell Oil.<em>We Build Trust.</em></h2>
+    <p class="section-sub" style="color: rgba(255,255,255,0.5);">Every litre we sell represents our commitment to quality, fairness, and community.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <span class="why-icon">🏆</span>
+      <div class="why-title">Guaranteed Quality</div>
+      <div class="why-desc">Every batch is checked for purity. No adulteration, no shortcuts — just honest oil at honest prices.</div>
+    </div>
+    <div class="why-card reveal">
+      <span class="why-icon">💰</span>
+      <div class="why-title">Competitive Pricing</div>
+      <div class="why-desc">We offer some of the best prices in Orile Iganmu and across Lagos — for both small purchases and large bulk orders.</div>
+    </div>
+    <div class="why-card reveal">
+      <span class="why-icon">🚚</span>
+      <div class="why-title">Local Delivery</div>
+      <div class="why-desc">We deliver across Lagos. Restaurants, households, food vendors — we bring the oil to you. Call us to arrange.</div>
+    </div>
+    <div class="why-card reveal">
+      <span class="why-icon">🤝</span>
+      <div class="why-title">Wholesale Friendly</div>
+      <div class="why-desc">Buying in bulk? We have special rates for resellers, caterers, eateries, and food businesses. Call to discuss.</div>
+    </div>
+    <div class="why-card reveal">
+      <span class="why-icon">📦</span>
+      <div class="why-title">Flexible Quantities</div>
+      <div class="why-desc">From 1 litre to full drums — we serve everyone. You don't need to buy in bulk to get quality oil from us.</div>
+    </div>
+    <div class="why-card reveal">
+      <span class="why-icon">📍</span>
+      <div class="why-title">Conveniently Located</div>
+      <div class="why-desc">Find us at 109 Baale Street, Orile Iganmu — a central Lagos location easy to reach from multiple areas.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="section-header reveal">
+    <span class="section-tag">Customer Love</span>
+    <h2 class="section-title">What Lagos Says <em>About Us</em></h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">I run a small canteen at Orile and I've been buying palm oil from Hadwatem for months. The quality is consistent and the price is always fair. No wahala!</div>
+      <div class="testimonial-author">
+        <div class="author-avatar">AC</div>
+        <div>
+          <div class="author-name">Adeola C.</div>
+          <div class="author-role">Canteen Owner, Orile Iganmu</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">The vegetable oil is clean and very good for frying. I use it for my snacks business and my customers always compliment the taste. I recommend Hadwatem!</div>
+      <div class="testimonial-author">
+        <div class="author-avatar">BK</div>
+        <div>
+          <div class="author-name">Blessing K.</div>
+          <div class="author-role">Snacks Vendor, Lagos</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">As a reseller, I need suppliers I can trust. Hadwatem gives me good prices on bulk orders and always delivers on time. Solid business people.</div>
+      <div class="testimonial-author">
+        <div class="author-avatar">OM</div>
+        <div>
+          <div class="author-name">Okeke M.</div>
+          <div class="author-role">Oil Reseller, Iganmu</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO ORDER -->
+<section class="how-to-order" id="order">
+  <div class="section-header reveal">
+    <span class="section-tag">Simple Process</span>
+    <h2 class="section-title">How to <em>Order</em></h2>
+    <p class="section-sub">Getting your oil is quick and easy. Three simple steps.</p>
+  </div>
+  <div class="steps reveal">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <div class="step-title">Call or WhatsApp Us</div>
+        <div class="step-desc">Reach out on 07062823485. Tell us which oil you need and how many litres or drums.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <div class="step-title">Confirm Your Order</div>
+        <div class="step-desc">We confirm availability, quantity, and price. Walk-in or arrange delivery across Lagos.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <div class="step-title">Pay & Receive</div>
+        <div class="step-desc">Payment validates your order. Pay to confirm your purchase — then pick up at our store or receive delivery. Simple and fast.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-bg"></div>
+  <div class="contact-grid">
+    <div class="contact-left">
+      <div class="section-header" style="text-align:left; margin-bottom:0">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Ready to <em>Order?</em></h2>
+      </div>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-item-label">Phone / WhatsApp</div>
+            <div class="contact-item-value"><a href="tel:07062823485">07062823485</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-item-label">Store Address</div>
+            <div class="contact-item-value">109 Baale Street,<br>Orile Iganmu, Lagos, Nigeria</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕗</div>
+          <div>
+            <div class="contact-item-label">Trading Hours</div>
+            <div class="contact-item-value">Monday – Saturday: 7:00am – 7:00pm<br>Sunday: 9:00am – 4:00pm</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🚚</div>
+          <div>
+            <div class="contact-item-label">Delivery</div>
+            <div class="contact-item-value">Available across Lagos<br><span style="color:rgba(255,255,255,0.4); font-size:0.82rem">Call to arrange & confirm delivery charges</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Send Us an Enquiry</h3>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="E.g. Amaka Johnson">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="E.g. 08012345678">
+      </div>
+      <div class="form-group">
+        <label>Oil Type</label>
+        <select>
+          <option value="">Select oil type</option>
+          <option>Palm Oil</option>
+          <option>Vegetable Oil</option>
+          <option>Both</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Quantity / Message</label>
+        <textarea placeholder="E.g. I need 25 litres of palm oil for my restaurant..."></textarea>
+      </div>
+      <button class="form-submit" onclick="handleSubmit()">📞 Submit Enquiry</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Hadwatem Oil</div>
+  <div class="footer-tagline">Premium Palm Oil & Vegetable Oil Suppliers — Lagos, Nigeria</div>
+  <div class="footer-links">
+    <a href="#products">Products</a>
+    <a href="#why-us">Why Us</a>
+    <a href="#order">How to Order</a>
+    <a href="tel:07062823485">Call Us</a>
+  </div>
+  <div class="footer-copy">© 2025 Hadwatem Oil. 109 Baale Street, Orile Iganmu, Lagos. All rights reserved.</div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp-float" href="https://wa.me/2347062823485" target="_blank" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Form submit handler
+  function handleSubmit() {
+    const name = document.querySelector('input[type="text"]').value;
+    const phone = document.querySelector('input[type="tel"]').value;
+    const oil = document.querySelector('select').value;
+    const msg = document.querySelector('textarea').value;
+
+    if (!name || !phone) {
+      alert('Please fill in your name and phone number.');
+      return;
+    }
+
+    const waMsg = encodeURIComponent(
+      `Hello Hadwatem Oil! 🌴\n\nName: ${name}\nPhone: ${phone}\nOil Type: ${oil || 'Not specified'}\nMessage: ${msg || 'No additional message'}\n\nI found you via your website.`
+    );
+
+    window.open(`https://wa.me/2347062823485?text=${waMsg}`, '_blank');
+  }
+</script>
+</body>
+</html>
