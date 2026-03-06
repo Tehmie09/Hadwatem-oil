@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <!-- Background gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#2A1A06;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A0E03;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- Gold gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5D078;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C8922A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8B84B;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Palm leaf gradient -->
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A7A24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2D5016;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Oil drop gradient -->
+    <linearGradient id="dropGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8B84B;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#C8922A;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Outer ring gradient -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5D078;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C8922A;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#F5D078;stop-opacity:1" />
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="250" cy="250" r="245" fill="url(#bgGrad)"/>
+
+  <!-- Outer decorative ring -->
+  <circle cx="250" cy="250" r="238" fill="none" stroke="url(#ringGrad)" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="250" cy="250" r="230" fill="none" stroke="url(#ringGrad)" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Decorative dots on ring -->
+  <circle cx="250" cy="12" r="3" fill="#E8B84B" opacity="0.8"/>
+  <circle cx="488" cy="250" r="3" fill="#E8B84B" opacity="0.8"/>
+  <circle cx="250" cy="488" r="3" fill="#E8B84B" opacity="0.8"/>
+  <circle cx="12" cy="250" r="3" fill="#E8B84B" opacity="0.8"/>
+  <circle cx="421" cy="79" r="2" fill="#E8B84B" opacity="0.5"/>
+  <circle cx="421" cy="421" r="2" fill="#E8B84B" opacity="0.5"/>
+  <circle cx="79" cy="421" r="2" fill="#E8B84B" opacity="0.5"/>
+  <circle cx="79" cy="79" r="2" fill="#E8B84B" opacity="0.5"/>
+
+  <!-- ===== PALM TREE ===== -->
+  <!-- Trunk -->
+  <path d="M250 320 Q245 290 242 260 Q240 230 243 200 Q245 185 250 175 Q255 185 257 200 Q260 230 258 260 Q255 290 250 320Z" fill="#8B5E2A" opacity="0.9"/>
+  <path d="M248 320 Q244 290 242 260 Q240 230 243 200" fill="none" stroke="#6B4520" stroke-width="1" opacity="0.5"/>
+
+  <!-- Palm leaves - left side -->
+  <path d="M250 185 Q220 165 195 155 Q175 148 160 150 Q170 160 185 165 Q200 170 215 175 Q232 180 250 185Z" fill="url(#leafGrad)" opacity="0.95"/>
+  <path d="M250 185 Q225 155 210 135 Q198 120 192 108 Q200 115 210 125 Q222 138 235 155 Q243 168 250 185Z" fill="url(#leafGrad)" opacity="0.9"/>
+  <path d="M250 185 Q240 158 238 135 Q236 118 240 105 Q244 118 246 135 Q248 158 250 185Z" fill="#4A7A24" opacity="0.85"/>
+
+  <!-- Palm leaves - right side -->
+  <path d="M250 185 Q280 165 305 155 Q325 148 340 150 Q330 160 315 165 Q300 170 285 175 Q268 180 250 185Z" fill="url(#leafGrad)" opacity="0.95"/>
+  <path d="M250 185 Q275 155 290 135 Q302 120 308 108 Q300 115 290 125 Q278 138 265 155 Q257 168 250 185Z" fill="url(#leafGrad)" opacity="0.9"/>
+
+  <!-- Coconuts/Palm fruits -->
+  <circle cx="248" cy="195" r="8" fill="#C8922A" opacity="0.9"/>
+  <circle cx="258" cy="200" r="7" fill="#B07820" opacity="0.85"/>
+  <circle cx="242" cy="202" r="7" fill="#C8922A" opacity="0.8"/>
+
+  <!-- ===== OIL DROPS ===== -->
+  <!-- Large center drop -->
+  <path d="M250 360 Q238 340 235 325 Q232 308 240 298 Q245 293 250 290 Q255 293 260 298 Q268 308 265 325 Q262 340 250 360Z" fill="url(#dropGrad)" filter="url(#glow)"/>
+  <!-- Drop shine -->
+  <ellipse cx="244" cy="310" rx="4" ry="7" fill="white" opacity="0.3" transform="rotate(-15, 244, 310)"/>
+
+  <!-- Small drops -->
+  <path d="M210 355 Q204 345 203 337 Q202 328 207 323 Q210 320 213 323 Q218 328 217 337 Q216 345 210 355Z" fill="url(#dropGrad)" opacity="0.7"/>
+  <path d="M290 355 Q284 345 283 337 Q282 328 287 323 Q290 320 293 323 Q298 328 297 337 Q296 345 290 355Z" fill="url(#dropGrad)" opacity="0.7"/>
+
+  <!-- ===== DECORATIVE LINE ===== -->
+  <line x1="100" y1="358" x2="400" y2="358" stroke="url(#goldGrad)" stroke-width="1" opacity="0.5"/>
+  <line x1="130" y1="361" x2="370" y2="361" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Small diamond decorations on line -->
+  <polygon points="250,354 254,358 250,362 246,358" fill="#E8B84B" opacity="0.8"/>
+  <polygon points="160,356 163,358 160,360 157,358" fill="#E8B84B" opacity="0.5"/>
+  <polygon points="340,356 343,358 340,360 337,358" fill="#E8B84B" opacity="0.5"/>
+
+  <!-- ===== TEXT ===== -->
+  <!-- HADWATEM -->
+  <text x="250" y="395"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="46"
+    font-weight="bold"
+    fill="url(#goldGrad)"
+    text-anchor="middle"
+    letter-spacing="4"
+    filter="url(#glow)">HADWATEM</text>
+
+  <!-- OIL -->
+  <text x="250" y="428"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="28"
+    font-weight="normal"
+    font-style="italic"
+    fill="#E8B84B"
+    text-anchor="middle"
+    letter-spacing="10"
+    opacity="0.9">O I L</text>
+
+  <!-- Tagline -->
+  <text x="250" y="450"
+    font-family="Arial, sans-serif"
+    font-size="11"
+    font-weight="normal"
+    fill="#C8922A"
+    text-anchor="middle"
+    letter-spacing="3"
+    opacity="0.75">PURE · NATURAL · WORLDWIDE</text>
+
+</svg>
